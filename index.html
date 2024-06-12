@@ -2798,11 +2798,14 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                             <div class="contact_content">
                                                                 <div class="contact_text">
                                                                     <div class="contact_title">Disrupting the Retail space by automation and AI.</div>
+                                                                    <br>
                                                                     <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
+                                                                    
                                                                     <div class="contact_ceo">
                                                                         <div class="ceo_name">Sangeeth Aluvila Rajan</div>
                                                                         <div class="ceo_title">CEO</div>
                                                                     </div>
+                                                                    <br>
                                                                     <a class="contact_button" href="/get-started">
                                                                         <div class="button_text">
                                                                             <div>Contact us</div>
@@ -2820,11 +2823,14 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                             <div class="contact_content">
                                                                 <div class="contact_text">
                                                                     <div class="contact_title">2</div>
+                                                                    <br>
                                                                     <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
+                                                                    
                                                                     <div class="contact_ceo">
                                                                         <div class="ceo_name">Sangeeth Aluvila Rajan</div>
                                                                         <div class="ceo_title">CEO</div>
                                                                     </div>
+                                                                    <br>
                                                                     <a class="contact_button" href="/get-started">
                                                                         <div class="button_text">
                                                                             <div>Contact us</div>
@@ -2842,11 +2848,14 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                             <div class="contact_content">
                                                                 <div class="contact_text">
                                                                     <div class="contact_title">3</div>
+                                                                    <br>
                                                                     <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
+                                                                    
                                                                     <div class="contact_ceo">
                                                                         <div class="ceo_name">Sangeeth Aluvila Rajan</div>
                                                                         <div class="ceo_title">CEO</div>
                                                                     </div>
+                                                                    <br>
                                                                     <a class="contact_button" href="/get-started">
                                                                         <div class="button_text">
                                                                             <div>Contact us</div>
@@ -2878,15 +2887,23 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                 .carousel-item {
                                                     min-width: 100%;
                                                     box-sizing: border-box;
-                                                    display: none;
+                                                    position: absolute;
                                                     opacity: 0;
-                                                    transition: opacity 1s ease-in-out;
+                                                    visibility: hidden;
+                                                    transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out; /* Adjust the transition timing here */
                                                 }
-                                        
+
                                                 .carousel-item.active {
+                                                    opacity: 1;
+                                                    visibility: visible;
+                                                    position: relative;
+                                                    display: flex; /* Make the active slide visible */
+                                                }
+
+                                                /* .carousel-item.active {
                                                     display: flex;
                                                     opacity: 1;
-                                                }
+                                                } */
                                         
                                                 .contact_footer_fading {
                                                     column-gap: 40px;
