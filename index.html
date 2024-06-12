@@ -1907,7 +1907,7 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                 </div>
                                             </div>
                                         </div> -->
-                   <div class="vc_row-full-width vc_clearfix"></div>
+                                        <div class="vc_row-full-width vc_clearfix"></div>
                                         <div id="vc_row-65c11d700d9db" class="vc_row wpb_row vc_row-fluid vc_custom_1461064608896 thegem-custom-65c11d700d9d55263" style="padding-top: 15rem;">
                                             <section class="solutions">
                                                 <h5>Solutions</h5>
@@ -1915,72 +1915,136 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                 <p>Learn about the AI hardware and software for retail and consumer packaged goods (CPG).</p>
                                                 <div class="solutions-container">
                                                     <div class="solution-column">
-                                                        <img src="./assets/dashboard_temp.jpeg" alt="dashboard">
-                                                        <h6>Our Dashboard to fulfill all your needs</h4>
+                                                        <img data-src="./assets/dashboard_temp.jpeg" alt="dashboard" class="lazy">
+                                                        <h6>Our Dashboard to fulfill all your needs</h6>
                                                         <p>With our Dashboard, retailers can improve customer satisfaction, in-store stocks and more. Discover how AI-enabled video analytics are helping build intelligent stores.</p>
                                                         <a href="#" class="learn-more-link">Learn More About Prism</a>
                                                     </div>
                                                     <div class="solution-column">
-                                                        <img src="./assets/checkout_temp.jpg" alt="Checkout">
-                                                        <h6>Deliver The Best Customer Experience</h4>
+                                                        <img data-src="./assets/checkout_temp.jpg" alt="Checkout" class="lazy">
+                                                        <h6>Deliver The Best Customer Experience</h6>
                                                         <p>With Auto Checkouts, processes that took minutes take no time, making it easier and faster to build and deploy value-generating models. Retailers are using it to provide personalized recommendations and improve demand forecasting, inventory management, and last-mile delivery.</p>
                                                         <a href="#" class="learn-more-link">Learn More About Prism</a>
                                                     </div>
                                                     <div class="solution-column">
-                                                        <img src="./assets/store_temp.jpg" alt="Store">
-                                                        <h6>Build and Operate Next Generation Retail Stores</h4>
+                                                        <img data-src="./assets/store_temp.jpg" alt="Store" class="lazy">
+                                                        <h6>Build and Operate Next Generation Retail Stores</h6>
                                                         <p>With Automated Inventory and stocks prediction, never run out of items to sell, no customer goes unhappy.</p>
                                                         <a href="#" class="learn-more-link">Learn More About Prism</a>
                                                     </div>
                                                 </div>
                                             </section>
-                                            
-                                            <style>
-                                                .solutions {
-                                                    text-align: center;
-                                                    padding: 50px;
-                                                }
-                                                .solutions-container {
-                                                    display: flex;
-                                                    flex-wrap: wrap;
-                                                    width: 100%;
-                                                    justify-content: center;
-                                                }
-                                                .solution-column {
-                                                    display: flex;
-                                                    flex-direction: column;
-                                                    align-items: start;
-                                                    text-align: left;
-                                                    padding: 20px;
-                                                    min-width: 300px;
-                                                    max-width: 30%;
-                                                    box-sizing: border-box;
-                                                    margin: 10px;
-                                                    transition: 0.5s;
-                                                }
-                                                .solution-column img {
-                                                    max-width: 100%;
-                                                    height: 200px;
-                                                    object-fit: cover;
-                                                }
-                                                .solution-column:hover {
-                                                    transform: scale(1.1);
-                                                }
-                                                .solution-column h4, .solution-column p, .solution-column a {
-                                                    margin: 10px 0;
-                                                }
-                                                .solution-column a {
-                                                    color: #007bff;
-                                                    text-decoration: none;
-                                                    margin-top: auto;
-                                                    transition: 0.4s;
-                                                }
-                                                .solution-column a:hover {
-                                                    color: #06407f;
-                                                    transition: 0.4s;
-                                                }
-                                            </style>
                                         </div>
+                                        
+                                        <style>
+                                            .solutions {
+                                                text-align: center;
+                                                padding: 50px;
+                                                animation: fadeIn 1s ease-in;
+                                            }
+                                            .solutions-container {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                width: 100%;
+                                                justify-content: center;
+                                            }
+                                            .solution-column {
+                                                display: flex;
+                                                flex-direction: column;
+                                                align-items: start;
+                                                text-align: left;
+                                                padding: 20px;
+                                                min-width: 300px;
+                                                max-width: 30%;
+                                                box-sizing: border-box;
+                                                margin: 10px;
+                                                transition: transform 0.5s, opacity 0.5s;
+                                                opacity: 0;
+                                                animation: slideUp 1s ease forwards;
+                                                animation-delay: calc(var(--i) * 0.2s);
+                                            }
+                                            .solution-column img {
+                                                max-width: 100%;
+                                                height: 200px;
+                                                object-fit: cover;
+                                                transition: transform 0.5s;
+                                            }
+                                            .solution-column:hover {
+                                                transform: scale(1.1);
+                                            }
+                                            .solution-column h6, .solution-column p, .solution-column a {
+                                                margin: 10px 0;
+                                                opacity: 0;
+                                                animation: fadeInUp 1s forwards;
+                                            }
+                                            .solution-column h6 {
+                                                animation-delay: 0.5s;
+                                            }
+                                            .solution-column p {
+                                                animation-delay: 0.7s;
+                                            }
+                                            .solution-column a {
+                                                animation-delay: 0.9s;
+                                                color: #007bff;
+                                                text-decoration: none;
+                                                margin-top: auto;
+                                                transition: color 0.4s;
+                                            }
+                                            .solution-column a:hover {
+                                                color: #06407f;
+                                                text-shadow: 0 0 10px #007bff;
+                                            }
+                                            @keyframes fadeIn {
+                                                from { opacity: 0; }
+                                                to { opacity: 1; }
+                                            }
+                                            @keyframes slideUp {
+                                                from { transform: translateY(50px); }
+                                                to { transform: translateY(0); }
+                                            }
+                                            @keyframes fadeInUp {
+                                                from { opacity: 0; transform: translateY(10px); }
+                                                to { opacity: 1; transform: translateY(0); }
+                                            }
+                                        </style>
+                                        
+                                        <script>
+                                            document.addEventListener("DOMContentLoaded", function() {
+                                                let lazyImages = document.querySelectorAll('.lazy');
+                                                let solutionColumns = document.querySelectorAll('.solution-column');
+                                        
+                                                let lazyLoad = new IntersectionObserver((entries, observer) => {
+                                                    entries.forEach(entry => {
+                                                        if (entry.isIntersecting) {
+                                                            let img = entry.target;
+                                                            img.src = img.getAttribute('data-src');
+                                                            img.classList.remove('lazy');
+                                                            observer.unobserve(img);
+                                                        }
+                                                    });
+                                                });
+                                        
+                                                lazyImages.forEach(img => {
+                                                    lazyLoad.observe(img);
+                                                });
+                                        
+                                                let revealSolutions = new IntersectionObserver((entries) => {
+                                                    entries.forEach(entry => {
+                                                        if (entry.isIntersecting) {
+                                                            entry.target.style.opacity = '1';
+                                                            entry.target.style.transform = 'translateY(0)';
+                                                        }
+                                                    });
+                                                });
+                                        
+                                                solutionColumns.forEach((column, index) => {
+                                                    column.style.setProperty('--i', index);
+                                                    revealSolutions.observe(column);
+                                                    column.style.transform = 'translateY(50px)';
+                                                });
+                                            });
+                                        </script>
+                                        
                                         <!-- <div class="vc_row-full-width-before"></div> -->
                                         <div class="vc_row-full-width vc_clearfix"></div>
                                         <div id="vc_row-65c11d700d9db" class="vc_row wpb_row vc_row-fluid vc_custom_1461064608896 thegem-custom-65c11d700d9d55263" style="padding-top: 15rem;">
