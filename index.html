@@ -2176,22 +2176,28 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                             .successes {
                                                 text-align: center;
                                                 padding: 50px;
+                                                position: relative;
                                             }
-                                            .successes h5::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: transparent;
-    transition: width 0.3s ease;
-}
 
-.successes:hover h5::before {
-    width: 100%;
-    background-color: #000; /* Adjust the color as needed */
-}
+                                            .successes h5 {
+                                                position: relative;
+                                            }
+
+                                            .successes h5::after {
+                                                content: '';
+                                                position: absolute;
+                                                width: 0;
+                                                height: 2px;
+                                                bottom: -2px;
+                                                left: 0;
+                                                background-color: #000; /* Adjust the color as needed */
+                                                transition: width 0.3s ease;
+                                            }
+
+                                            .successes:hover h5::after {
+                                                width: 100%;
+                                            }
+                                            
                                             .carousel {
                                                 position: relative;
                                                 width: 100%;
