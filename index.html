@@ -2134,7 +2134,7 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                         <div class="vc_row-full-width vc_clearfix"></div>
                                         <div id="vc_row-65c11d700d9db" class="vc_row wpb_row vc_row-fluid vc_custom_1461064608896 thegem-custom-65c11d700d9d55263" style="padding-top: 15rem;">
                                             <section class="successes">
-                                                <h5>Success Stories</h>
+                                                <h5 style = "font-size: 24px;">Success Stories</h>
                                                 <p></p>
                                                 <div class="carousel">
                                                     <div class="carousel-images">
@@ -2300,71 +2300,71 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                 const width = carousel.offsetWidth;
                                                 const height = carousel.querySelector('.carousel-image').offsetHeight;
                                                 carousel.style.transform = `translateX(-${currentIndex * width}px)`;
-        document.querySelector('.carousel').style.height = `${height}px`;
-    }
+                                                document.querySelector('.carousel').style.height = `${height}px`;
+                                            }
 
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + imageCount) % imageCount;
-        updateCarousel();
-        updateSlideIndicators();
-    });
+                                            prevBtn.addEventListener('click', () => {
+                                                currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+                                                updateCarousel();
+                                                updateSlideIndicators();
+                                            });
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % imageCount;
-        updateCarousel();
-        updateSlideIndicators();
-    });
+                                            nextBtn.addEventListener('click', () => {
+                                                currentIndex = (currentIndex + 1) % imageCount;
+                                                updateCarousel();
+                                                updateSlideIndicators();
+                                            });
 
-    const slideIndicatorsContainer = document.querySelector('.slide-indicators');
+                                            const slideIndicatorsContainer = document.querySelector('.slide-indicators');
 
-    function createSlideIndicators() {
-        for (let i = 0; i < imageCount; i++) {
-            const indicator = document.createElement('span');
-            indicator.classList.add('slide-indicator');
-            indicator.dataset.index = i;
-            indicator.addEventListener('click', () => {
-                currentIndex = i;
-                updateCarousel();
-                updateSlideIndicators();
-            });
-            slideIndicatorsContainer.appendChild(indicator);
-        }
-        updateSlideIndicators();
-    }
+                                            function createSlideIndicators() {
+                                                for (let i = 0; i < imageCount; i++) {
+                                                    const indicator = document.createElement('span');
+                                                    indicator.classList.add('slide-indicator');
+                                                    indicator.dataset.index = i;
+                                                    indicator.addEventListener('click', () => {
+                                                        currentIndex = i;
+                                                        updateCarousel();
+                                                        updateSlideIndicators();
+                                                    });
+                                                    slideIndicatorsContainer.appendChild(indicator);
+                                                }
+                                                updateSlideIndicators();
+                                            }
 
-    function updateSlideIndicators() {
-        const indicators = slideIndicatorsContainer.querySelectorAll('.slide-indicator');
-        indicators.forEach((indicator, i) => {
-            if (i === currentIndex) {
-                indicator.classList.add('active');
-            } else {
-                indicator.classList.remove('active');
-            }
-        });
-    }
+                                            function updateSlideIndicators() {
+                                                const indicators = slideIndicatorsContainer.querySelectorAll('.slide-indicator');
+                                                indicators.forEach((indicator, i) => {
+                                                    if (i === currentIndex) {
+                                                        indicator.classList.add('active');
+                                                    } else {
+                                                        indicator.classList.remove('active');
+                                                    }
+                                                });
+                                            }
 
-    createSlideIndicators();
+                                            createSlideIndicators();
 
-    window.addEventListener('resize', updateCarousel);
-    window.addEventListener('load', updateCarousel);
-    let slideInterval;
+                                            window.addEventListener('resize', updateCarousel);
+                                            window.addEventListener('load', updateCarousel);
+                                            let slideInterval;
 
-    function startSlideInterval() {
-        slideInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % imageCount;
-            updateCarousel();
-            updateSlideIndicators();
-        }, 2000);
-    }
+                                            function startSlideInterval() {
+                                                slideInterval = setInterval(() => {
+                                                    currentIndex = (currentIndex + 1) % imageCount;
+                                                    updateCarousel();
+                                                    updateSlideIndicators();
+                                                }, 2000);
+                                            }
 
-    function stopSlideInterval() {
-        clearInterval(slideInterval);
-    }
-    carousel.addEventListener('mouseenter', stopSlideInterval);
-    carousel.addEventListener('mouseleave', startSlideInterval);
+                                            function stopSlideInterval() {
+                                                clearInterval(slideInterval);
+                                            }
+                                            carousel.addEventListener('mouseenter', stopSlideInterval);
+                                            carousel.addEventListener('mouseleave', startSlideInterval);
 
-    startSlideInterval();
-</script>
+                                            startSlideInterval();
+                                        </script>
                                         
 
                                         <!-- <div class="vc_row-full-width vc_clearfix"></div>
@@ -2790,272 +2790,270 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                         </div>
 
                                         <div class="vc_row-full-width vc_clearfix"></div>
-                                        <div id="vc_row-65c11d700d9db" class="vc_row wpb_row vc_row-fluid vc_custom_1461064608896 thegem-custom-65c11d700d9d55263" style="padding-top: 15rem;">
-                                            <div class="carousel-container">
-                                                <div class="carousel-track">
-                                                    <div class="carousel-item">
-                                                        <section class="contact_footer">
-                                                            <div class="contact_content">
-                                                                <div class="contact_text">
-                                                                    <div class="contact_title">Disrupting the Retail space by automation and AI.</div>
-                                                                    <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
-                                                                    <div class="contact_ceo">
-                                                                        <div class="ceo_name">Sangeeth Aluvila Rajan</div>
-                                                                        <div class="ceo_title">CEO</div>
-                                                                    </div>
-                                                                    <a class="contact_button" href="/get-started">
-                                                                        <div class="button_text">
-                                                                            <div>Contact us</div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="contact_image">
-                                                                    <img src="./assets/sangeeth_linkedin.jpeg" alt="Sangeeth Aluvila Rajan" />
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <section class="contact_footer">
-                                                            <div class="contact_content">
-                                                                <div class="contact_text">
-                                                                    <div class="contact_title">2</div>
-                                                                    <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
-                                                                    <div class="contact_ceo">
-                                                                        <div class="ceo_name">Sangeeth Aluvila Rajan</div>
-                                                                        <div class="ceo_title">CEO</div>
-                                                                    </div>
-                                                                    <a class="contact_button" href="/get-started">
-                                                                        <div class="button_text">
-                                                                            <div>Contact us</div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="contact_image">
-                                                                    <img src="./assets/sangeeth_linkedin.jpeg" alt="Sangeeth Aluvila Rajan" />
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                    <div class="carousel-item">
-                                                        <section class="contact_footer">
-                                                            <div class="contact_content">
-                                                                <div class="contact_text">
-                                                                    <div class="contact_title">3</div>
-                                                                    <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
-                                                                    <div class="contact_ceo">
-                                                                        <div class="ceo_name">Sangeeth Aluvila Rajan</div>
-                                                                        <div class="ceo_title">CEO</div>
-                                                                    </div>
-                                                                    <a class="contact_button" href="/get-started">
-                                                                        <div class="button_text">
-                                                                            <div>Contact us</div>
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="contact_image">
-                                                                    <img src="./assets/sangeeth_linkedin.jpeg" alt="Sangeeth Aluvila Rajan" />
-                                                                </div>
-                                                            </div>
-                                                        </section>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
+<div id="vc_row-65c11d700d9db" class="vc_row wpb_row vc_row-fluid vc_custom_1461064608896 thegem-custom-65c11d700d9d55263" style="padding-top: 15rem;">
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <div class="carousel-item">
+                <section class="contact_footer">
+                    <div class="contact_content">
+                        <div class="contact_text">
+                            <div class="contact_title">Disrupting the Retail space by automation and AI.</div>
+                            <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
+                            <div class="contact_ceo">
+                                <div class="ceo_name">Sangeeth Aluvila Rajan</div>
+                                <div class="ceo_title">CEO</div>
+                            </div>
+                            <a class="contact_button" href="/get-started">
+                                <div class="button_text">
+                                    <div>Contact us</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact_image">
+                            <img src="./assets/sangeeth_linkedin.jpeg" alt="Sangeeth Aluvila Rajan" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="contact_footer">
+                    <div class="contact_content">
+                        <div class="contact_text">
+                            <div class="contact_title">2</div>
+                            <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
+                            <div class="contact_ceo">
+                                <div class="ceo_name">Sangeeth Aluvila Rajan</div>
+                                <div class="ceo_title">CEO</div>
+                            </div>
+                            <a class="contact_button" href="/get-started">
+                                <div class="button_text">
+                                    <div>Contact us</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact_image">
+                            <img src="./assets/sangeeth_linkedin.jpeg" alt="Sangeeth Aluvila Rajan" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="carousel-item">
+                <section class="contact_footer">
+                    <div class="contact_content">
+                        <div class="contact_text">
+                            <div class="contact_title">3</div>
+                            <p class="contact_description">We provide multiple solutions to meet all your retail requirements.</p>
+                            <div class="contact_ceo">
+                                <div class="ceo_name">Sangeeth Aluvila Rajan</div>
+                                <div class="ceo_title">CEO</div>
+                            </div>
+                            <a class="contact_button" href="/get-started">
+                                <div class="button_text">
+                                    <div>Contact us</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact_image">
+                            <img src="./assets/sangeeth_linkedin.jpeg" alt="Sangeeth Aluvila Rajan" />
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <style>
+        .carousel-container {
+            overflow: hidden;
+            width: 100%;
+            max-width: 1090px;
+            margin: 0 auto;
+            position: relative;
+        }
 
-                                                <style>
-                                                    /* Carousel container */
-                                                    .carousel-container {
-                                                        overflow: hidden;
-                                                        width: 100%;
-                                                        max-width: 1090px;
-                                                        margin: 0 auto;
-                                                        position: relative;
-                                                    }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
 
-                                                    /* Carousel track */
-                                                    .carousel-track {
-                                                        display: flex;
-                                                        transition: transform 0.5s ease-in-out;
-                                                    }
+        .carousel-item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
 
-                                                    /* Carousel item */
-                                                    .carousel-item {
-                                                        min-width: 100%;
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_footer {
+            z-index: 2;
+            column-gap: 40px;
+            background-image: radial-gradient(circle at 100% 190%, rgba(26, 98, 253, 0.15), rgba(65, 91, 249, 0.15) 23%, rgba(255, 255,            255, 0.15) 46%), radial-gradient(circle at 0px 190%, rgba(26, 98, 253, 0.15), rgba(141, 76, 240, 0.15) 34%, rgba(255, 255, 255, 0.15) 42%);
+            border: 0.8px solid rgba(26, 98, 253, 0.15);
+            border-radius: 22px;
+            align-items: center;
+            width: 100%;
+            max-width: 1090px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 48px 100px;
+            display: flex;
+            box-sizing: border-box;
+            animation: fadeIn 1s ease-out;
+        }
 
-                                                    /* Styles for contact_footer section */
-                                                    .contact_footer {
-                                                        z-index: 2;
-                                                        column-gap: 40px;
-                                                        background-image: radial-gradient(circle at 100% 190%, rgba(26, 98, 253, 0.15), rgba(65, 91, 249, 0.15) 23%, rgba(255, 255, 255, 0.15) 46%), radial-gradient(circle at 0px 190%, rgba(26, 98, 253, 0.15), rgba(141, 76, 240, 0.15) 34%, rgba(255, 255, 255, 0.15) 42%);
-                                                        border: 0.8px solid rgba(26, 98, 253, 0.15);
-                                                        border-radius: 22px;
-                                                        align-items: center;
-                                                        width: 100%;
-                                                        max-width: 1090px;
-                                                        margin-left: auto;
-                                                        margin-right: auto;
-                                                        padding: 48px 100px;
-                                                        display: flex;
-                                                        box-sizing: border-box;
-                                                        animation: fadeIn 1s ease-out; /* Apply fade-in animation */
-                                                    }
+        .contact_content {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+        }
 
-                                                    .contact_content {
-                                                        display: flex;
-                                                        align-items: center;
-                                                        flex-direction: row;
-                                                        width: 100%;
-                                                    }
+        .contact_text {
+            row-gap: 24px;
+            color: rgb(69, 80, 102);
+            letter-spacing: -0.2px;
+            flex-direction: column;
+            flex: 1 1 0%;
+            align-items: flex-start;
+            line-height: 23.2px;
+            display: flex;
+            box-sizing: border-box;
+        }
 
-                                                    .contact_text {
-                                                        row-gap: 24px;
-                                                        color: rgb(69, 80, 102);
-                                                        letter-spacing: -0.2px;
-                                                        flex-direction: column;
-                                                        flex: 1 1 0%;
-                                                        align-items: flex-start;
-                                                        line-height: 23.2px;
-                                                        display: flex;
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_title {
+            color: rgb(8, 10, 19);
+            letter-spacing: -0.5px;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            box-sizing: border-box;
+        }
 
-                                                    .contact_title {
-                                                        color: rgb(8, 10, 19);
-                                                        letter-spacing: -0.5px;
-                                                        font-size: 24px;
-                                                        font-weight: 500;
-                                                        line-height: 31.2px;
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_description {
+            color: rgb(69, 80, 102);
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: left;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: Inter, sans-serif;
+            font-size: 16px;
+            line-height: 25px;
+            box-sizing: border-box;
+        }
 
-                                                    .contact_description {
-                                                        color: rgb(69, 80, 102);
-                                                        margin-top: 0px;
-                                                        margin-bottom: 0px;
-                                                        text-align: left;
-                                                        justify-content: flex-start;
-                                                        align-items: center;
-                                                        font-family: Inter, sans-serif;
-                                                        font-size: 16px;
-                                                        line-height: 25px;
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_ceo {
+            box-sizing: border-box;
+        }
 
-                                                    .contact_ceo {
-                                                        box-sizing: border-box;
-                                                    }
+        .ceo_name {
+            color: rgb(39, 47, 64);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18.9px;
+            box-sizing: border-box;
+        }
 
-                                                    .ceo_name {
-                                                        color: rgb(39, 47, 64);
-                                                        font-size: 14px;
-                                                        font-weight: 500;
-                                                        line-height: 18.9px;
-                                                        box-sizing: border-box;
-                                                    }
+        .ceo_title {
+            opacity: 0.8;
+            color: rgb(69, 80, 102);
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 18.9px;
+            box-sizing: border-box;
+        }
 
-                                                    .ceo_title {
-                                                        opacity: 0.8;
-                                                        color: rgb(69, 80, 102);
-                                                        font-size: 14px;
-                                                        font-weight: 500;
-                                                        line-height: 18.9px;
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_button {
+            pointer-events: auto;
+            color: rgb(39, 47, 64);
+            border: 0.8px solid rgb(35, 89, 251);
+            border-radius: 100px;
+            padding: 8px 13px 8px 16px;
+            font-size: 14px;
+            line-height: 18.9px;
+            transition: font-size 0.2s ease 0s, background-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
+            text-decoration: none solid rgb(39, 47, 64);
+            max-width: 100%;
+            display: block;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0);
+        }
 
-                                                    .contact_button {
-                                                        pointer-events: auto;
-                                                        color: rgb(39, 47, 64);
-                                                        border: 0.8px solid rgb(35, 89, 251);
-                                                        border-radius: 100px;
-                                                        padding: 8px 13px 8px 16px;
-                                                        font-size: 14px;
-                                                        line-height: 18.9px;
-                                                        transition: font-size 0.2s ease 0s, background-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
-                                                        text-decoration: none solid rgb(39, 47, 64);
-                                                        max-width: 100%;
-                                                        display: block;
-                                                        box-sizing: border-box;
-                                                        background-color: rgba(0, 0, 0, 0);
-                                                    }
+        .contact_button:hover {
+            animation: scaleUp 0.3s ease forwards;
+            background-color: rgb(128, 160, 255);
+        }
 
-                                                    .contact_button:hover {
-                                                        animation: scaleUp 0.3s ease forwards; /* Apply scale-up on hover */
-                                                        background-color: rgb(128, 160, 255);
-                                                    }
+        .button_text {
+            justify-content: center;
+            line-height: 18.2px;
+            display: flex;
+            box-sizing: border-box;
+        }
 
-                                                    .button_text {
-                                                        justify-content: center;
-                                                        line-height: 18.2px;
-                                                        display: flex;
-                                                        box-sizing: border-box;
-                                                    }
+        .button_arrow {
+            letter-spacing: normal;
+            margin-left: 6px;
+            box-sizing: border-box;
+        }
 
-                                                    .button_arrow {
-                                                        letter-spacing: normal;
-                                                        margin-left: 6px;
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_image {
+            box-sizing: border-box;
+        }
 
-                                                    .contact_image {
-                                                        box-sizing: border-box;
-                                                    }
+        .contact_image img {
+            object-fit: cover;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 281px;
+            height: 281px;
+            max-height: 281px;
+            display: inline-block;
+            vertical-align: middle;
+            box-sizing: border-box;
+            border: 0px none rgba(0, 0, 0, 0.9);
+        }
 
-                                                    .contact_image img {
-                                                        object-fit: cover;
-                                                        border-radius: 12px;
-                                                        width: 100%;
-                                                        max-width: 281px;
-                                                        height: 281px;
-                                                        max-height: 281px;
-                                                        display: inline-block;
-                                                        vertical-align: middle;
-                                                        box-sizing: border-box;
-                                                        border: 0px none rgba(0, 0, 0, 0.9);
-                                                    }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-                                                    /* Fade-in animation keyframes */
-                                                    @keyframes fadeIn {
-                                                        from {
-                                                            opacity: 0;
-                                                            transform: translateY(20px);
-                                                        }
-                                                        to {
-                                                            opacity: 1;
-                                                            transform: translateY(0);
-                                                        }
-                                                    }
+        @keyframes scaleUp {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const track = document.querySelector('.carousel-track');
+            const items = document.querySelectorAll('.carousel-item');
+            let currentIndex = 0;
 
-                                                    /* Button hover scale-up animation */
-                                                    @keyframes scaleUp {
-                                                        from {
-                                                            transform: scale(1);
-                                                        }
-                                                        to {
-                                                            transform: scale(1.05);
-                                                        }
-                                                    }
+            function moveCarousel() {
+                currentIndex++;
+                if (currentIndex === items.length) {
+                    currentIndex = 0;
+                }
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
 
-                                                </style>                                                  
-                                            </section>
-                                        </div>
-                                        <script>
-                                            const track = document.querySelector('.carousel-track');
-                                                let currentIndexContactFooter = 0;
-                                                const items = document.querySelectorAll('.carousel-item');
+            setInterval(moveCarousel, 3000); // Change the slide every 3 seconds
 
-                                                function moveCarousel() {
-                                                    currentIndexContactFooter++;
-                                                    if (currentIndexContactFooter === items.length) {
-                                                        currentIndexContactFooter = 0;
-                                                    }
-                                                    track.style.transform = translateX(-currentIndexContactFooter * 100);
-                                                }
+            window.addEventListener('resize', () => {
+                // Ensure the correct transform value on resize
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            });
+        });
+    </script>
+</div>
 
-                                            setInterval(moveCarousel, 1); // Change the slide every 3 seconds
-                                        </script>
 
                                         <div class="vc_row-full-width vc_clearfix"></div>
                                         <div id="vc_row-65c11d70102f6" class="vc_row wpb_row vc_row-fluid thegem-custom-65c11d70102f21578">
