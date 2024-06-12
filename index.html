@@ -2134,7 +2134,7 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                         <div class="vc_row-full-width vc_clearfix"></div>
                                         <div id="vc_row-65c11d700d9db" class="vc_row wpb_row vc_row-fluid vc_custom_1461064608896 thegem-custom-65c11d700d9d55263" style="padding-top: 15rem;">
                                             <section class="successes">
-                                                <h5 style = "font-size: 24px;">Success Stories</h>
+                                                <h5 style="font-size: 24px;">Success Stories</h5>
                                                 <p></p>
                                                 <div class="carousel">
                                                     <div class="carousel-images">
@@ -2177,6 +2177,21 @@ body .gem-testimonials.style1 .gem-testimonial-wrapper:after{ color: #ffb320 !im
                                                 text-align: center;
                                                 padding: 50px;
                                             }
+                                            .successes h5::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: transparent;
+    transition: width 0.3s ease;
+}
+
+.successes:hover h5::before {
+    width: 100%;
+    background-color: #000; /* Adjust the color as needed */
+}
                                             .carousel {
                                                 position: relative;
                                                 width: 100%;
