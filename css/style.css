@@ -8,7 +8,7 @@
     padding: 1rem;
     width: 100%;
     object-fit: cover;
-    /* filter: blur(2px); */
+    filter: blur(2px);
 }
 
 .img-container-single:hover {
@@ -71,7 +71,7 @@
     padding: 2rem;
 }
 
-.use-case-h3 {
+.use-case-h4 {
     padding-inline: 0.8rem;
     color: white;
 }
